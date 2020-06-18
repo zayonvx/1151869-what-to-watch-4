@@ -10,3 +10,5 @@ export const promoData = {
   genre: `Drama`,
   releaseDate: 2010,
 };
+
+export const titleHandler = () => {};

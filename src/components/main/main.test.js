@@ -11,6 +11,7 @@ it(`Test Main`, () =>{
         promoGenre={promoData.genre}
         promoReleaseDate={promoData.releaseDate}
         movieNames={MOVIE_NAMES}
+        onTitleClick={() => {}}
       />
   ).toJSON();
 

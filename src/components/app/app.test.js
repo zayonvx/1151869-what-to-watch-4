@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer';
 
 import {MOVIE_NAMES, promoData} from '../../utils/consts';
 
-it(`Test Main`, () => {
+it(`Test App`, () => {
   const tree = renderer.create(
       <App
         promoTitle={promoData.title}
