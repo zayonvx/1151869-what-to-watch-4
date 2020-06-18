@@ -4,3 +4,9 @@ export const MOVIE_NAMES = [
   `Macbeth`,
   `Aviator`,
 ];
+
+export const promoData = {
+  title: `Shutter Island`,
+  genre: `Drama`,
+  releaseDate: 2010,
+};
