@@ -1,7 +1,7 @@
 import React from 'react';
 import Main from '../main/main.jsx';
 import PropTypes from 'prop-types';
-import {MOVIE_NAMES} from '../../utils/consts';
+import {MOVIE_NAMES, titleHandler} from '../../utils/consts';
 
 const App = (props) => {
   const {promoTitle, promoGenre, promoReleaseDate, movieNames} = props;
@@ -11,6 +11,7 @@ const App = (props) => {
     promoGenre={promoGenre}
     promoReleaseDate={promoReleaseDate}
     movieNames={movieNames}
+    onTitleClick={titleHandler}
   />;
 };
 
