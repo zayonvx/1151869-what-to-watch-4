@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MoviesList from '../movies-list/movies-list.jsx'
+import MoviesList from '../movies-list/movies-list.jsx';
 
 const Main = (props) => {
   const {promoTitle, promoGenre, promoReleaseDate, promoBackground, promoPoster, promoPosterAlt, movies, onTitleClick} = props;
@@ -132,6 +132,8 @@ Main.propTypes = {
   promoReleaseDate: PropTypes.number.isRequired,
   promoGenre: PropTypes.string.isRequired,
   promoPoster: PropTypes.string.isRequired,
+  promoBackground: PropTypes.string.isRequired,
+  promoPosterAlt: PropTypes.string.isRequired,
   movies: PropTypes.array.isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };

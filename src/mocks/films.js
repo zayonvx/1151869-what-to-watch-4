@@ -31,4 +31,4 @@ export const moviesData = [
     title: `Johnny English`,
     image: `img/johnny-english.jpg`,
   },
-]
+];

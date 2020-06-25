@@ -17,7 +17,7 @@ const App = (props) => {
       promoPosterAlt={promoPosterAlt}
       movies={movies}
       onTitleClick={titleHandler}
-  />
+    />
   );
 };
 
@@ -26,6 +26,8 @@ App.propTypes = {
   promoGenre: PropTypes.string.isRequired,
   promoReleaseDate: PropTypes.number.isRequired,
   promoBackground: PropTypes.string.isRequired,
+  promoPoster: PropTypes.string.isRequired,
+  promoPosterAlt: PropTypes.string.isRequired,
   movies: PropTypes.array.isRequired,
 };
 

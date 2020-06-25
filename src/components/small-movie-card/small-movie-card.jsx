@@ -7,7 +7,10 @@ const SmallMovieCard = (props) => {
   return (<>
     <article className="small-movie-card catalog__movies-card"
       onClick={onTitleClick}
-      onMouseOver={() => {onHover(index)}}
+      onMouseOver={() => {
+        onHover(index);
+      }
+      }
     >
       <div className="small-movie-card__image">
         <img src={image} alt={title} width="280" height="175" />

@@ -2,7 +2,9 @@ import React from 'react';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Main from './main.jsx';
-import {MOVIE_NAMES} from '../../utils/consts';
+
+import {promoData} from '../../mocks/promo';
+import {moviesData} from '../../mocks/films';
 
 Enzyme.configure({
   adapter: new Adapter()
@@ -16,8 +18,11 @@ it(`Card title should be clicked`, () => {
         promoTitle={`Bohemian Rhapsody`}
         promoReleaseDate={2018}
         promoGenre={`Drama`}
-        movieNames={MOVIE_NAMES}
-        onTitleClick={onTitleClick}
+        promoPoster={promoData.poster}
+        promoPosterAlt={promoData.posterAlt}
+        promoBackground={promoData.background}
+        movies={moviesData}
+        onTitleClick={() => {}}
       />
   );
 
