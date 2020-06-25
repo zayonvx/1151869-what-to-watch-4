@@ -1,25 +1,32 @@
 import React from 'react';
 import Main from '../main/main.jsx';
 import PropTypes from 'prop-types';
-import {MOVIE_NAMES, titleHandler} from '../../utils/consts';
+
+import {titleHandler} from '../../utils/consts';
 
 const App = (props) => {
-  const {promoTitle, promoGenre, promoReleaseDate, movieNames} = props;
+  const {promoTitle, promoGenre, promoReleaseDate, promoBackground, promoPoster, promoPosterAlt, movies} = props;
 
-  return <Main
-    promoTitle={promoTitle}
-    promoGenre={promoGenre}
-    promoReleaseDate={promoReleaseDate}
-    movieNames={movieNames}
-    onTitleClick={titleHandler}
-  />;
+  return (
+    <Main
+      promoTitle={promoTitle}
+      promoGenre={promoGenre}
+      promoReleaseDate={promoReleaseDate}
+      promoBackground={promoBackground}
+      promoPoster={promoPoster}
+      promoPosterAlt={promoPosterAlt}
+      movies={movies}
+      onTitleClick={titleHandler}
+  />
+  );
 };
 
 App.propTypes = {
   promoTitle: PropTypes.string.isRequired,
-  promoReleaseDate: PropTypes.number.isRequired,
   promoGenre: PropTypes.string.isRequired,
-  movieNames: PropTypes.arrayOf(PropTypes.oneOf(MOVIE_NAMES)).isRequired,
+  promoReleaseDate: PropTypes.number.isRequired,
+  promoBackground: PropTypes.string.isRequired,
+  movies: PropTypes.array.isRequired,
 };
 
 export default App;

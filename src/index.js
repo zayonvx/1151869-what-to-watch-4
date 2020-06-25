@@ -2,24 +2,18 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import App from './components/app/app.jsx';
 
-import {MOVIE_NAMES} from './utils/consts';
+import {moviesData} from './mocks/films';
+import {promoData} from './mocks/promo';
 
-const init = () => {
-  const promo = {
-    title: `The Grand Budapest Hotel`,
-    genre: `Drama`,
-    releaseDate: 2014,
-  };
-
-  ReactDom.render(
-      <App
-        promoTitle = {promo.title}
-        promoGenre = {promo.genre}
-        promoReleaseDate = {promo.releaseDate}
-        movieNames = {MOVIE_NAMES}
-      />,
-      document.querySelector(`#root`)
-  );
-};
-
-init();
+ReactDom.render(
+    <App
+      promoTitle = {promoData.title}
+      promoGenre = {promoData.genre}
+      promoReleaseDate = {promoData.releaseDate}
+      promoBackground = {promoData.background}
+      promoPoster = {promoData.poster}
+      promoPosterAlt = {promoData.posterAlt}
+      movies = {moviesData}
+    />,
+    document.querySelector(`#root`)
+);

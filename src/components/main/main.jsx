@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {MOVIE_NAMES} from '../../utils/consts';
+
+import MoviesList from '../movies-list/movies-list.jsx'
 
 const Main = (props) => {
-  const {promoTitle, promoGenre, promoReleaseDate, movieNames, onTitleClick} = props;
+  const {promoTitle, promoGenre, promoReleaseDate, promoBackground, promoPoster, promoPosterAlt, movies, onTitleClick} = props;
 
   return (<>
     <section className="movie-card">
       <div className="movie-card__bg">
-        <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel" />
+        <img src={promoBackground} alt={promoTitle} />
       </div>
 
       <h1 className="visually-hidden">WTW</h1>
@@ -32,7 +33,7 @@ const Main = (props) => {
       <div className="movie-card__wrap">
         <div className="movie-card__info">
           <div className="movie-card__poster">
-            <img src="img/the-grand-budapest-hotel-poster.jpg" alt="The Grand Budapest Hotel poster" width="218" height="327" />
+            <img src={promoPoster} alt={promoPosterAlt} width="218" height="327" />
           </div>
 
           <div className="movie-card__desc">
@@ -98,18 +99,10 @@ const Main = (props) => {
           </li>
         </ul>
         <div className="catalog__movies-list">
-          {movieNames.map((title, index) => {
-            return (
-              <article className="small-movie-card catalog__movies-card" key={index + title}>
-                <div className="small-movie-card__image">
-                  <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title">
-                  <a className="small-movie-card__link" href="movie-page.html" onClick={onTitleClick}>{title}</a>
-                </h3>
-              </article>
-            );
-          })}
+          <MoviesList
+            movies={movies}
+            onTitleClick={onTitleClick}
+          />
         </div>
 
         <div className="catalog__more">
@@ -138,7 +131,8 @@ Main.propTypes = {
   promoTitle: PropTypes.string.isRequired,
   promoReleaseDate: PropTypes.number.isRequired,
   promoGenre: PropTypes.string.isRequired,
-  movieNames: PropTypes.arrayOf(PropTypes.oneOf(MOVIE_NAMES)).isRequired,
+  promoPoster: PropTypes.string.isRequired,
+  movies: PropTypes.array.isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
 
