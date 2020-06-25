@@ -2,8 +2,6 @@ import React from 'react';
 import Main from '../main/main.jsx';
 import PropTypes from 'prop-types';
 
-import {titleHandler} from '../../utils/consts';
-
 const App = (props) => {
   const {promoTitle, promoGenre, promoReleaseDate, promoBackground, promoPoster, promoPosterAlt, movies} = props;
 
@@ -16,7 +14,7 @@ const App = (props) => {
       promoPoster={promoPoster}
       promoPosterAlt={promoPosterAlt}
       movies={movies}
-      onTitleClick={titleHandler}
+      onTitleClick={() => {}}
     />
   );
 };
