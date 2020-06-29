@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import MoviesList from '../movies-list/movies-list.jsx';
 
 const Main = (props) => {
-  const {promoTitle, promoGenre, promoReleaseDate, promoBackground, promoPoster, promoPosterAlt, movies, onTitleClick} = props;
+  const {promo, movies, onTitleClick} = props;
 
   return (<>
     <section className="movie-card">
       <div className="movie-card__bg">
-        <img src={promoBackground} alt={promoTitle} />
+        <img src={promo.background} alt={promo.title} />
       </div>
 
       <h1 className="visually-hidden">WTW</h1>
@@ -33,14 +33,14 @@ const Main = (props) => {
       <div className="movie-card__wrap">
         <div className="movie-card__info">
           <div className="movie-card__poster">
-            <img src={promoPoster} alt={promoPosterAlt} width="218" height="327" />
+            <img src={promo.poster} alt={promo.posterAlt} width="218" height="327" />
           </div>
 
           <div className="movie-card__desc">
-            <h2 className="movie-card__title">{promoTitle}</h2>
+            <h2 className="movie-card__title">{promo.title}</h2>
             <p className="movie-card__meta">
-              <span className="movie-card__genre">{promoGenre}</span>
-              <span className="movie-card__year">{promoReleaseDate}</span>
+              <span className="movie-card__genre">{promo.genre}</span>
+              <span className="movie-card__year">{promo.releaseDate}</span>
             </p>
 
             <div className="movie-card__buttons">
@@ -128,12 +128,7 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  promoTitle: PropTypes.string.isRequired,
-  promoReleaseDate: PropTypes.number.isRequired,
-  promoGenre: PropTypes.string.isRequired,
-  promoPoster: PropTypes.string.isRequired,
-  promoBackground: PropTypes.string.isRequired,
-  promoPosterAlt: PropTypes.string.isRequired,
+  promo: PropTypes.object.isRequired,
   movies: PropTypes.array.isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };

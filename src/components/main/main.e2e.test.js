@@ -15,12 +15,7 @@ it(`Card title should be clicked`, () => {
 
   const main = shallow(
       <Main
-        promoTitle={`Bohemian Rhapsody`}
-        promoReleaseDate={2018}
-        promoGenre={`Drama`}
-        promoPoster={promoData.poster}
-        promoPosterAlt={promoData.posterAlt}
-        promoBackground={promoData.background}
+        promo={promoData}
         movies={moviesData}
         onTitleClick={() => {}}
       />

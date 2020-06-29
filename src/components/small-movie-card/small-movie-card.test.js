@@ -1,17 +1,13 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import SmallMovieCard from './small-movie-card.jsx';
-
-const mocks = {
-  title: `Shutter Island`,
-  image: `img/the-grand-budapest-hotel-poster.jpg`,
-};
+import {moviesData} from '../../mocks/films';
 
 it(`SmallMovieCard is rendered`, () => {
   const tree = renderer.create(
       <SmallMovieCard
-        title = {mocks.title}
-        image = {mocks.image}
+        title = {moviesData[0].title}
+        image = {moviesData[0].image}
         onTitleClick = {() => {}}
         onHover = {() => {}}
         index = {0}

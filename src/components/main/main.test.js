@@ -8,12 +8,7 @@ import {promoData} from '../../mocks/promo';
 it(`Test Main`, () =>{
   const tree = renderer.create(
       <Main
-        promoTitle={promoData.title}
-        promoGenre={promoData.genre}
-        promoReleaseDate={promoData.releaseDate}
-        promoPoster={promoData.poster}
-        promoPosterAlt={promoData.posterAlt}
-        promoBackground={promoData.background}
+        promo={promoData}
         movies={moviesData}
         onTitleClick={() => {}}
       />

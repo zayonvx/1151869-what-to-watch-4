@@ -8,12 +8,7 @@ import {promoData} from '../../mocks/promo.js';
 it(`Test App`, () => {
   const tree = renderer.create(
       <App
-        promoTitle={promoData.title}
-        promoGenre={promoData.genre}
-        promoReleaseDate={promoData.releaseDate}
-        promoBackground={promoData.background}
-        promoPoster={promoData.poster}
-        promoPosterAlt={promoData.posterAlt}
+        promo={promoData}
         movies={moviesData}
       />
   ).toJSON();

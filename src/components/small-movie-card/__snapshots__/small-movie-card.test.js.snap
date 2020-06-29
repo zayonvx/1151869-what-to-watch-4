@@ -10,9 +10,9 @@ exports[`SmallMovieCard is rendered 1`] = `
     className="small-movie-card__image"
   >
     <img
-      alt="Shutter Island"
+      alt="Fantastic Beasts: The Crimes of Grindelwald"
       height="175"
-      src="img/the-grand-budapest-hotel-poster.jpg"
+      src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
       width="280"
     />
   </div>
@@ -24,7 +24,7 @@ exports[`SmallMovieCard is rendered 1`] = `
       href="movie-page.html"
       onClick={[Function]}
     >
-      Shutter Island
+      Fantastic Beasts: The Crimes of Grindelwald
     </a>
   </h3>
 </article>
