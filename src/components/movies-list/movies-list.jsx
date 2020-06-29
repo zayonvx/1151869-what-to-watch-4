@@ -21,8 +21,7 @@ class MoviesList extends PureComponent {
     return (
       movies.map((movie, index) =>
         <SmallMovieCard
-          title={movie.title}
-          image={movie.image}
+          movie={movie}
           index={index}
           onTitleClick={onTitleClick}
           onHover={this._handleHover}

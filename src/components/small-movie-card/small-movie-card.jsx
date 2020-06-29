@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SmallMovieCard = (props) => {
-  const {title, image, onTitleClick, onHover, index} = props;
+  const {movie, onTitleClick, onHover, index} = props;
 
   return (<>
     <article className="small-movie-card catalog__movies-card"
@@ -13,18 +13,17 @@ const SmallMovieCard = (props) => {
       }
     >
       <div className="small-movie-card__image">
-        <img src={image} alt={title} width="280" height="175" />
+        <img src={movie.image} alt={movie.title} width="280" height="175" />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href="movie-page.html" onClick={onTitleClick}>{title}</a>
+        <a className="small-movie-card__link" href="movie-page.html" onClick={onTitleClick}>{movie.title}</a>
       </h3>
     </article>
   </>);
 };
 
 SmallMovieCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  movie: PropTypes.object.isRequired,
   onTitleClick: PropTypes.func.isRequired,
   onHover: PropTypes.func.isRequired,
   index: PropTypes.number.isRequired,

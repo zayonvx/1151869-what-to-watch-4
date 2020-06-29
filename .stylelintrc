@@ -1,7 +1,3 @@
 {
-  "extends": "stylelint-config-htmlacademy, stylelint-config-prettier"
-  "plugins": ["stylelint-prettier"],
-  "rules": {
-    "prettier/prettier": true
-  }
+  "extends": "stylelint-config-htmlacademy"
 }

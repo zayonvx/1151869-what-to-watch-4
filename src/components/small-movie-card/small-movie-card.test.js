@@ -7,8 +7,7 @@ it(`SmallMovieCard is rendered`, () => {
   const tree = renderer
     .create(
         <SmallMovieCard
-          title={moviesData[0].title}
-          image={moviesData[0].image}
+          movie={moviesData[0]}
           onTitleClick={() => {}}
           onHover={() => {}}
           index={0}
