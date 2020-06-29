@@ -1,11 +1,11 @@
-import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import SmallMovieCard from './small-movie-card.jsx';
-import {moviesData} from '../../mocks/films';
+import React from "react";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import SmallMovieCard from "./small-movie-card.jsx";
+import {moviesData} from "../../mocks/films";
 
 Enzyme.configure({
-  adapter: new Adapter()
+  adapter: new Adapter(),
 });
 
 it(`Card should be hovered`, () => {
@@ -13,10 +13,10 @@ it(`Card should be hovered`, () => {
 
   const card = shallow(
       <SmallMovieCard
-        title = {moviesData[0].title}
-        image = {moviesData[0].image}
-        onTitleClick = {() => {}}
-        onHover = {onHover}
+        title={moviesData[0].title}
+        image={moviesData[0].image}
+        onTitleClick={() => {}}
+        onHover={onHover}
       />
   );
 

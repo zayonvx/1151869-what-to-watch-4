@@ -1,24 +1,20 @@
-import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import Main from './main.jsx';
+import React from "react";
+import Enzyme, {shallow} from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
+import Main from "./main.jsx";
 
-import {promoData} from '../../mocks/promo';
-import {moviesData} from '../../mocks/films';
+import {promoData} from "../../mocks/promo";
+import {moviesData} from "../../mocks/films";
 
 Enzyme.configure({
-  adapter: new Adapter()
+  adapter: new Adapter(),
 });
 
 it(`Card title should be clicked`, () => {
   const onTitleClick = jest.fn();
 
   const main = shallow(
-      <Main
-        promo={promoData}
-        movies={moviesData}
-        onTitleClick={() => {}}
-      />
+      <Main promo={promoData} movies={moviesData} onTitleClick={() => {}} />
   );
 
   const cardLink = main.find(`a.small-movie-card__link`);

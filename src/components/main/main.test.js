@@ -1,18 +1,16 @@
-import React from 'react';
-import Main from './main.jsx';
-import renderer from 'react-test-renderer';
+import React from "react";
+import Main from "./main.jsx";
+import renderer from "react-test-renderer";
 
-import {moviesData} from '../../mocks/films';
-import {promoData} from '../../mocks/promo';
+import {moviesData} from "../../mocks/films";
+import {promoData} from "../../mocks/promo";
 
-it(`Test Main`, () =>{
-  const tree = renderer.create(
-      <Main
-        promo={promoData}
-        movies={moviesData}
-        onTitleClick={() => {}}
-      />
-  ).toJSON();
+it(`Test Main`, () => {
+  const tree = renderer
+    .create(
+        <Main promo={promoData} movies={moviesData} onTitleClick={() => {}} />
+    )
+    .toJSON();
 
   expect(tree).toMatchSnapshot();
 });
