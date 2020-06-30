@@ -1,7 +1,7 @@
 import React from "react";
 import Enzyme, {shallow} from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import Main from "./main.jsx";
+import Main from "./main";
 
 import {promoData} from "../../mocks/promo";
 import {moviesData} from "../../mocks/films";

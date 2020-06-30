@@ -1,9 +1,9 @@
 import React from "react";
-import App from "./app.jsx";
+import App from "./app";
 import renderer from "react-test-renderer";
 
-import {moviesData} from "../../mocks/films.js";
-import {promoData} from "../../mocks/promo.js";
+import {moviesData} from "../../mocks/films";
+import {promoData} from "../../mocks/promo";
 
 it(`Test App`, () => {
   const tree = renderer

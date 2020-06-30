@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MoviesList from '../movies-list/movies-list.jsx';
+import MoviesList from '../movies-list/movies-list';
+import {TypesData} from '../types';
 
-const Main = (props) => {
-  const {promo, movies, onTitleClick} = props;
+const Main = ({promo, movies, onTitleClick}) => {
 
   return (<>
     <section className="movie-card">
@@ -128,8 +128,8 @@ const Main = (props) => {
 };
 
 Main.propTypes = {
-  promo: PropTypes.object.isRequired,
-  movies: PropTypes.array.isRequired,
+  promo: TypesData.PROMO,
+  movies: PropTypes.arrayOf(TypesData.MOVIE).isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
 

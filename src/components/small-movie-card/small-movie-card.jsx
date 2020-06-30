@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {TypesData} from '../types';
 
-const SmallMovieCard = (props) => {
-  const {movie, onTitleClick, onHover, index} = props;
+const SmallMovieCard = ({movie, onTitleClick, onHover, index}) => {
 
   return (<>
     <article className="small-movie-card catalog__movies-card"
@@ -23,7 +23,7 @@ const SmallMovieCard = (props) => {
 };
 
 SmallMovieCard.propTypes = {
-  movie: PropTypes.object.isRequired,
+  movie: TypesData.MOVIE,
   onTitleClick: PropTypes.func.isRequired,
   onHover: PropTypes.func.isRequired,
   index: PropTypes.number.isRequired,
