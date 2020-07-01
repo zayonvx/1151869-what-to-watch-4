@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {TypesData} from '../types';
+import {movieTypes} from '../types';
 
-const SmallMovieCard = ({movie, onTitleClick, onHover, index}) => {
+export const SmallMovieCard = ({movie, onTitleClick, onHover, index}) => {
 
   return (<>
     <article className="small-movie-card catalog__movies-card"
@@ -23,10 +23,8 @@ const SmallMovieCard = ({movie, onTitleClick, onHover, index}) => {
 };
 
 SmallMovieCard.propTypes = {
-  movie: TypesData.MOVIE,
+  movie: movieTypes.isRequired,
   onTitleClick: PropTypes.func.isRequired,
   onHover: PropTypes.func.isRequired,
   index: PropTypes.number.isRequired,
 };
-
-export default SmallMovieCard;

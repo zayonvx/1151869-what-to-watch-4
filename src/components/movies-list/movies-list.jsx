@@ -1,9 +1,9 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import SmallMovieCard from '../small-movie-card/small-movie-card';
-import {TypesData} from '../types';
+import {SmallMovieCard} from '../core';
+import {movieTypes} from '../types';
 
-class MoviesList extends PureComponent {
+export class MoviesList extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -34,8 +34,6 @@ class MoviesList extends PureComponent {
 }
 
 MoviesList.propTypes = {
-  movies: PropTypes.arrayOf(TypesData.MOVIE).isRequired,
+  movies: PropTypes.arrayOf(movieTypes).isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
-
-export default MoviesList;

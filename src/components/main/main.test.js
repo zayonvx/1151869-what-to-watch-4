@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "./main";
+import {Main} from "./main";
 import renderer from "react-test-renderer";
 
 import {moviesData} from "../../mocks/films";

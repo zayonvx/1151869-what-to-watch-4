@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import MoviesList from '../movies-list/movies-list';
-import {TypesData} from '../types';
+import {MoviesList} from '../core';
+import {promoTypes, movieTypes} from '../types';
 
-const Main = ({promo, movies, onTitleClick}) => {
+export const Main = ({promo, movies, onTitleClick}) => {
 
   return (<>
     <section className="movie-card">
@@ -128,9 +128,7 @@ const Main = ({promo, movies, onTitleClick}) => {
 };
 
 Main.propTypes = {
-  promo: TypesData.PROMO,
-  movies: PropTypes.arrayOf(TypesData.MOVIE).isRequired,
+  promo: promoTypes.isRequired,
+  movies: PropTypes.arrayOf(movieTypes).isRequired,
   onTitleClick: PropTypes.func.isRequired,
 };
-
-export default Main;
