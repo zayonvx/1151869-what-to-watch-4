@@ -1,13 +1,11 @@
 import React from "react";
-import {App} from "./app";
 import renderer from "react-test-renderer";
-
+import {MoviesList} from "./movies-list";
 import {moviesData} from "../../mocks/films";
-import {promoData} from "../../mocks/promo";
 
-it(`Test App`, () => {
+it(`MoviesList is rendered`, () => {
   const tree = renderer
-    .create(<App promo={promoData} movies={moviesData} />)
+    .create(<MoviesList movies={moviesData} onTitleClick={() => {}} />)
     .toJSON();
 
   expect(tree).toMatchSnapshot();

@@ -12,7 +12,7 @@ parserOptions:
   ecmaVersion: 6
   sourceType: module
 
-plugins: ['react']
+plugins: ["react", "prettier"]
 
 settings:
   react:
