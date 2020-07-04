@@ -1,11 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MoviesList is rendered 1`] = `
-Array [
+<div
+  className="catalog__movies-list"
+>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={1}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -28,11 +30,11 @@ Array [
         Fantastic Beasts: The Crimes of Grindelwald
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={2}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -55,11 +57,11 @@ Array [
         Bohemian Rhapsody
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={3}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -82,11 +84,11 @@ Array [
         Macbeth
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={4}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -109,11 +111,11 @@ Array [
         Aviator
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={5}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -136,11 +138,11 @@ Array [
         We need to talk about Kevin
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={6}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -163,11 +165,11 @@ Array [
         What We Do in the Shadows
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={7}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -190,11 +192,11 @@ Array [
         Revenant
       </a>
     </h3>
-  </article>,
+  </article>
   <article
     className="small-movie-card catalog__movies-card"
+    data-id={8}
     onClick={[Function]}
-    onMouseOver={[Function]}
   >
     <div
       className="small-movie-card__image"
@@ -217,6 +219,6 @@ Array [
         Johnny English
       </a>
     </h3>
-  </article>,
-]
+  </article>
+</div>
 `;

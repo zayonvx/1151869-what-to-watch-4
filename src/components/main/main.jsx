@@ -131,4 +131,5 @@ Main.propTypes = {
   promo: promoTypes.isRequired,
   movies: PropTypes.arrayOf(movieTypes).isRequired,
   onTitleClick: PropTypes.func.isRequired,
+  onCardHover: PropTypes.func.isRequired,
 };

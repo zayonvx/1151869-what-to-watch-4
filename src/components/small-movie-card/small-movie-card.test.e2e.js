@@ -9,14 +9,14 @@ Enzyme.configure({
 });
 
 it(`Card should be hovered`, () => {
-  const onHover = jest.fn();
+  const onCardHover = jest.fn();
 
   const card = shallow(
       <SmallMovieCard
         title={moviesData[0].title}
         image={moviesData[0].image}
         onTitleClick={() => {}}
-        onHover={onHover}
+        onCardHover={onCardHover}
       />
   );
 
