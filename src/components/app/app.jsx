@@ -13,8 +13,32 @@ export class App extends PureComponent {
       selectedMovie: null
     };
 
-    this._handlerTitleClick = this._handlerTitleClick.bind(this);
+  }
 
+  _renderMain() {
+    const {promo, movies} = this.props;
+    const {selectedMovie} = this.state;
+
+    if (selectedMovie) {
+      return this._renderMoviePage();
+    }
+    return (
+      <Main
+        promo={promo}
+        movies={movies}
+        onTitleClick={(movie) => {
+          this.setState({selectedMovie: movie});
+        }}
+      />
+    );
+  }
+
+  _renderMoviePage() {
+    return (
+      <MoviePage
+        movie = {this.props.movies[0]}
+      />
+    );
   }
 
   render() {
@@ -30,35 +54,6 @@ export class App extends PureComponent {
         </Switch>
       </BrowserRouter>
     );
-  }
-
-  _renderMain() {
-    const {promo, movies} = this.props;
-    const {selectedMovie} = this.state;
-
-    if (selectedMovie) {
-      return this._renderMoviePage();
-    } else {
-      return (
-        <Main
-          promo={promo}
-          movies={movies}
-          onTitleClick={this._handlerTitleClick}
-        />
-      );
-    }
-  }
-
-  _renderMoviePage() {
-    return (
-      <MoviePage
-        movie = {this.props.movies[0]}
-      />
-    );
-  }
-
-  _handlerTitleClick(movie) {
-    this.setState({selectedMovie: movie});
   }
 }
 

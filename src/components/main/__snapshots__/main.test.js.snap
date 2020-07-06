@@ -264,6 +264,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={1}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -291,6 +292,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={2}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -318,6 +320,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={3}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -345,6 +348,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={4}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -372,6 +376,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={5}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -399,6 +404,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={6}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -426,6 +432,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={7}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
@@ -453,6 +460,7 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={8}
             onClick={[Function]}
+            onMouseOver={[Function]}
           >
             <div
               className="small-movie-card__image"
