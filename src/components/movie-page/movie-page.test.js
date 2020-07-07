@@ -1,11 +1,13 @@
 import React from "react";
+import {MoviePage} from "./movie-page";
 import renderer from "react-test-renderer";
-import {MoviesList} from "./movies-list";
 import {moviesData} from "../../mocks/films";
 
-it(`MoviesList is rendered`, () => {
+it(`Test MoviePage`, () => {
   const tree = renderer
-    .create(<MoviesList movies={moviesData} onTitleClick={() => {}} onCardHover={() => {}} />)
+    .create(
+        <MoviePage movie={moviesData[0]}/>
+    )
     .toJSON();
 
   expect(tree).toMatchSnapshot();

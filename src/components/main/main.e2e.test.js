@@ -14,7 +14,7 @@ it(`Card title should be clicked`, () => {
   const onTitleClick = jest.fn();
 
   const main = shallow(
-      <Main promo={promoData} movies={moviesData} onTitleClick={() => {}} />
+      <Main promo={promoData} movies={moviesData} onTitleClick={onTitleClick}/>
   );
 
   const cardLink = main.find(`a.small-movie-card__link`);
