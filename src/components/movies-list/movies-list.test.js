@@ -5,8 +5,14 @@ import {moviesData} from "../../mocks/films";
 
 it(`MoviesList is rendered`, () => {
   const tree = renderer
-    .create(<MoviesList movies={moviesData} onTitleClick={() => {}} onCardHover={() => {}} />)
-    .toJSON();
+  .create(
+      <MoviesList
+        movies={moviesData}
+        onTitleClick={() => {}}
+        onCardHover={() => {}}
+      />
+  )
+  .toJSON();
 
   expect(tree).toMatchSnapshot();
 });

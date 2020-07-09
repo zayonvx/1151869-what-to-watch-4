@@ -8,10 +8,10 @@ import {onTitleClick} from "../const";
 
 it(`Test Main`, () => {
   const tree = renderer
-    .create(
-        <Main promo={promoData} movies={moviesData} onTitleClick={onTitleClick} />
-    )
-    .toJSON();
+  .create(
+      <Main promo={promoData} movies={moviesData} onTitleClick={onTitleClick} />
+  )
+  .toJSON();
 
   expect(tree).toMatchSnapshot();
 });

@@ -4,11 +4,7 @@ import renderer from "react-test-renderer";
 import {moviesData} from "../../mocks/films";
 
 it(`Test MoviePage`, () => {
-  const tree = renderer
-    .create(
-        <MoviePage movie={moviesData[0]}/>
-    )
-    .toJSON();
+  const tree = renderer.create(<MoviePage movie={moviesData[0]} />).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

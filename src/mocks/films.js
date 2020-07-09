@@ -13,6 +13,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     id: 4,
@@ -58,6 +61,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     id: 5,
@@ -73,6 +77,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     id: 6,
@@ -88,6 +93,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
   {
     id: 7,
@@ -103,6 +109,7 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`,
   },
   {
     id: 8,
@@ -118,5 +125,6 @@ export const moviesData = [
     ratingCount: 240,
     director: `Wes Andreson`,
     starring: `Bill Murray, Edward Norton, Jude Law, Willem Dafoe`,
+    preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
   },
 ];

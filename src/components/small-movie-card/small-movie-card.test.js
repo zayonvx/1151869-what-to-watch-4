@@ -6,14 +6,14 @@ import {onTitleClick, onCardHover} from "../const";
 
 it(`SmallMovieCard is rendered`, () => {
   const tree = renderer
-    .create(
-        <SmallMovieCard
-          movie={moviesData[0]}
-          onTitleClick={onTitleClick}
-          onCardHover={onCardHover}
-        />
-    )
-    .toJSON();
+  .create(
+      <SmallMovieCard
+        movie={moviesData[0]}
+        onTitleClick={onTitleClick}
+        onCardHover={onCardHover}
+      />
+  )
+  .toJSON();
 
   expect(tree).toMatchSnapshot();
 });

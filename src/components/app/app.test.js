@@ -8,7 +8,9 @@ import {onTitleClick} from "../const";
 
 it(`Test App`, () => {
   const tree = renderer
-    .create(<App promo={promoData} movies={moviesData} onTitleClick={onTitleClick}/>)
+    .create(
+        <App promo={promoData} movies={moviesData} onTitleClick={onTitleClick} />
+    )
     .toJSON();
 
   expect(tree).toMatchSnapshot();

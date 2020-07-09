@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {movieTypes} from '../types';
+import {VideoPlayer} from '../core';
+import {VIDEO} from '../const';
 
-export const SmallMovieCard = ({movie, onTitleClick, onCardHover}) => {
+export const SmallMovieCard = ({movie, onTitleClick, onCardMouseEnter, onCardMouseLeave, isPlaying}) => {
 
   const onArticleMouseClick = (evt) => {
     onTitleClick(evt.currentTarget.dataset.id);
@@ -13,15 +15,25 @@ export const SmallMovieCard = ({movie, onTitleClick, onCardHover}) => {
     onTitleClick(evt.currentTarget.dataset.id);
   };
 
+  const handleCardMouseEnter = () => {
+    onCardMouseEnter(movie.id);
+  };
+
   return (<>
     <article className="small-movie-card catalog__movies-card"
       data-id={movie.id}
       onClick={onArticleMouseClick}
-      onMouseOver={onCardHover}
+      onMouseEnter={handleCardMouseEnter}
+      onMouseLeave={onCardMouseLeave}
     >
-      <div className="small-movie-card__image">
-        <img src={movie.image} alt={movie.title} width="280" height="175" />
-      </div>
+      <VideoPlayer
+        isPlaying={isPlaying}
+        isMuted={VIDEO.isMute}
+        src={movie.preview}
+        poster={movie.image}
+        width={VIDEO.width}
+        height={VIDEO.height}
+      />
       <h3 className="small-movie-card__title">
         <a className="small-movie-card__link" href="movie-page.html" onClick={onLinkMouseClick}>{movie.title}</a>
       </h3>
@@ -32,5 +44,7 @@ export const SmallMovieCard = ({movie, onTitleClick, onCardHover}) => {
 SmallMovieCard.propTypes = {
   movie: movieTypes.isRequired,
   onTitleClick: PropTypes.func.isRequired,
-  onCardHover: PropTypes.func.isRequired,
+  onCardMouseEnter: PropTypes.func.isRequired,
+  onCardMouseLeave: PropTypes.func.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
 };
