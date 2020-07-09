@@ -5,16 +5,18 @@ exports[`SmallMovieCard is rendered 1`] = `
   className="small-movie-card catalog__movies-card"
   data-id={1}
   onClick={[Function]}
-  onMouseOver={[Function]}
+  onMouseEnter={[Function]}
 >
   <div
     className="small-movie-card__image"
   >
-    <img
-      alt="Fantastic Beasts: The Crimes of Grindelwald"
-      height="175"
-      src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-      width="280"
+    <video
+      height={175}
+      muted={true}
+      onCanPlayThrough={[Function]}
+      poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+      src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+      width={280}
     />
   </div>
   <h3

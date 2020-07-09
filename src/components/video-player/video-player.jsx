@@ -28,8 +28,8 @@ export const VideoPlayer = ({src, poster, isPlaying, isMuted, height, width}) =>
 VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired,
   poster: PropTypes.string.isRequired,
-  isPlaying: PropTypes.bool.isRequired,
+  isPlaying: PropTypes.bool,
   isMuted: PropTypes.bool.isRequired,
-  height: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
+  height: PropTypes.number.isRequired,
+  width: PropTypes.number.isRequired,
 };

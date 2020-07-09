@@ -264,16 +264,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={1}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="Fantastic Beasts: The Crimes of Grindelwald"
-                height="175"
-                src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+                src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                width={280}
               />
             </div>
             <h3
@@ -292,16 +295,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={2}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="Bohemian Rhapsody"
-                height="175"
-                src="img/bohemian-rhapsody.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/bohemian-rhapsody.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+                width={280}
               />
             </div>
             <h3
@@ -320,16 +326,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={3}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="Macbeth"
-                height="175"
-                src="img/macbeth.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/macbeth.jpg"
+                src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                width={280}
               />
             </div>
             <h3
@@ -348,16 +357,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={4}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="Aviator"
-                height="175"
-                src="img/aviator.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/aviator.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+                width={280}
               />
             </div>
             <h3
@@ -376,16 +388,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={5}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="We need to talk about Kevin"
-                height="175"
-                src="img/we-need-to-talk-about-kevin.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/we-need-to-talk-about-kevin.jpg"
+                src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                width={280}
               />
             </div>
             <h3
@@ -404,16 +419,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={6}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="What We Do in the Shadows"
-                height="175"
-                src="img/what-we-do-in-the-shadows.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/what-we-do-in-the-shadows.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+                width={280}
               />
             </div>
             <h3
@@ -432,16 +450,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={7}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="Revenant"
-                height="175"
-                src="img/revenant.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/revenant.jpg"
+                src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
+                width={280}
               />
             </div>
             <h3
@@ -460,16 +481,19 @@ Array [
             className="small-movie-card catalog__movies-card"
             data-id={8}
             onClick={[Function]}
-            onMouseOver={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
           >
             <div
               className="small-movie-card__image"
             >
-              <img
-                alt="Johnny English"
-                height="175"
-                src="img/johnny-english.jpg"
-                width="280"
+              <video
+                height={175}
+                muted={true}
+                onCanPlayThrough={[Function]}
+                poster="img/johnny-english.jpg"
+                src="https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm"
+                width={280}
               />
             </div>
             <h3

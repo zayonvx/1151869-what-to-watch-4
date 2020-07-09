@@ -44,7 +44,7 @@ export const SmallMovieCard = ({movie, onTitleClick, onCardMouseEnter, onCardMou
 SmallMovieCard.propTypes = {
   movie: movieTypes.isRequired,
   onTitleClick: PropTypes.func.isRequired,
-  onCardMouseEnter: PropTypes.func.isRequired,
-  onCardMouseLeave: PropTypes.func.isRequired,
-  isPlaying: PropTypes.bool.isRequired,
+  onCardMouseEnter: PropTypes.func,
+  onCardMouseLeave: PropTypes.func,
+  isPlaying: PropTypes.bool,
 };
