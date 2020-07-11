@@ -12,6 +12,24 @@ export class MoviesList extends PureComponent {
     };
 
     this.timerOnHoverID = null;
+
+    this._onCardMouseEnter = this._onCardMouseEnter.bind(this);
+    this._onCardMouseLeave = this._onCardMouseLeave.bind(this);
+
+  }
+
+  _onCardMouseEnter(card) {
+    if (card) {
+      this.timerOnHoverID = setTimeout(() => this.setState({
+        hoverMovieID: card
+      }), VIDEO.delay);
+    }
+  }
+
+  _onCardMouseLeave() {
+    if (this.timerOnHoverID) {
+      clearTimeout(this.timerOnHoverID);
+    } this.setState({hoverMovieID: null});
   }
 
   render() {
@@ -24,18 +42,8 @@ export class MoviesList extends PureComponent {
               key={movie.id}
               movie={movie}
               onTitleClick={onTitleClick}
-              onCardMouseEnter={(card) => {
-                if (card) {
-                  this.timerOnHoverID = setTimeout(() => this.setState({
-                    hoverMovieID: card
-                  }), VIDEO.delay);
-                }
-              }}
-              onCardMouseLeave={() => {
-                if (this.timerOnHoverID) {
-                  clearTimeout(this.timerOnHoverID);
-                } this.setState({hoverMovieID: null});
-              }}
+              onCardMouseEnter={this._onCardMouseEnter}
+              onCardMouseLeave={this._onCardMouseLeave}
               isPlaying={this.state.hoverMovieID === movie.id}
             />
           );

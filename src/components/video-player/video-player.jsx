@@ -4,6 +4,13 @@ import PropTypes from 'prop-types';
 export const VideoPlayer = ({src, poster, isPlaying, isMuted, height, width}) => {
   const videoRef = createRef();
 
+  const onCanPlayThrough = () => {
+    const video = videoRef.current;
+    if (isPlaying) {
+      video.play();
+    }
+  };
+
   return (
     <div className="small-movie-card__image">
       <video
@@ -14,12 +21,7 @@ export const VideoPlayer = ({src, poster, isPlaying, isMuted, height, width}) =>
         height={height}
         width={width}
         ref={videoRef}
-        onCanPlayThrough={() => {
-          const video = videoRef.current;
-          if (isPlaying) {
-            video.play();
-          }
-        }}
+        onCanPlayThrough={onCanPlayThrough}
       />
     </div>
   );
