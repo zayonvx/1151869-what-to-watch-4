@@ -16,7 +16,9 @@ export const SmallMovieCard = ({movie, onTitleClick, onCardMouseEnter, onCardMou
   };
 
   const handleCardMouseEnter = () => {
-    onCardMouseEnter(movie.id);
+    if (onCardMouseEnter) {
+      onCardMouseEnter(movie.id);
+    }
   };
 
   return (<>

@@ -12,10 +12,6 @@ export class MoviesList extends PureComponent {
     };
 
     this.timerOnHoverID = null;
-
-    this._onCardMouseEnter = this._onCardMouseEnter.bind(this);
-    this._onCardMouseLeave = this._onCardMouseLeave.bind(this);
-
   }
 
   _onCardMouseEnter(card) {
@@ -42,8 +38,8 @@ export class MoviesList extends PureComponent {
               key={movie.id}
               movie={movie}
               onTitleClick={onTitleClick}
-              onCardMouseEnter={this._onCardMouseEnter}
-              onCardMouseLeave={this._onCardMouseLeave}
+              onCardMouseEnter={(card) => this._onCardMouseEnter(card)}
+              onCardMouseLeave={() => this._onCardMouseLeave()}
               isPlaying={this.state.hoverMovieID === movie.id}
             />
           );
