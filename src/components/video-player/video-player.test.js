@@ -10,12 +10,11 @@ it(`VideoPlayer is renderer correctly`, () => {
 
   const tree = renderer.create(
       <VideoPlayer
-        poster={movie.image}
-        src={movie.preview}
-        isMuted={VIDEO.isMute}
+        movie={movie}
         isPlaying={isPlaying}
-        height={VIDEO.height}
+        isMuted={VIDEO.isMute}
         width={VIDEO.width}
+        height={VIDEO.height}
       />
   )
     .toJSON();

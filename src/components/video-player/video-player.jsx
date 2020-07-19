@@ -1,37 +1,51 @@
-import React, {createRef} from 'react';
+import React, {createRef, PureComponent} from 'react';
 import PropTypes from 'prop-types';
+import {VIDEO} from '../const';
+import {movieTypes} from '../types';
 
-export const VideoPlayer = ({src, poster, isPlaying, isMuted, height, width}) => {
-  const videoRef = createRef();
+export class VideoPlayer extends PureComponent {
+  constructor(props) {
+    super(props);
 
-  const onCanPlayThrough = () => {
-    const video = videoRef.current;
-    if (isPlaying) {
-      video.play();
+    this._videoRef = createRef();
+
+    this._timeout = null;
+  }
+
+
+  componentDidUpdate() {
+    const video = this._videoRef.current;
+
+    if (this.props.isPlaying) {
+      this._timeout = setTimeout(() => video.play(), VIDEO.delay);
+    } else {
+      clearTimeout(this._timeout);
+      video.load();
     }
-  };
+  }
 
-  return (
-    <div className="small-movie-card__image">
-      <video
-        key={isPlaying}
-        poster={poster}
-        src={src}
-        muted={isMuted}
-        height={height}
-        width={width}
-        ref={videoRef}
-        onCanPlayThrough={onCanPlayThrough}
-      />
-    </div>
-  );
-};
+  render() {
+    const {movie, width, height} = this.props;
+    return (
+      <div className="small-movie-card__image">
+        <video
+          src={movie.preview}
+          poster={movie.image}
+          width={width}
+          height={height}
+          ref={this._videoRef}
+          muted={this.props.isMuted}
+        />
+      </div>
+
+    );
+  }
+}
 
 VideoPlayer.propTypes = {
-  src: PropTypes.string.isRequired,
-  poster: PropTypes.string.isRequired,
-  isPlaying: PropTypes.bool,
-  isMuted: PropTypes.bool.isRequired,
-  height: PropTypes.number.isRequired,
+  movie: movieTypes.isRequired,
   width: PropTypes.number.isRequired,
+  height: PropTypes.number.isRequired,
+  isPlaying: PropTypes.bool.isRequired,
+  isMuted: PropTypes.bool.isRequired,
 };

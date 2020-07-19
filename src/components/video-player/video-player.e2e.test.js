@@ -16,12 +16,11 @@ Enzyme.configure({
 it(`VideoPlayer started and paused correctly`, () => {
   const player = mount(
       <VideoPlayer
-        poster={movie.image}
-        width={VIDEO.width}
-        src={movie.preview}
-        height={VIDEO.height}
-        isMuted={VIDEO.isMute}
+        movie={movie}
         isPlaying={isPlaying}
+        isMuted={VIDEO.isMute}
+        width={VIDEO.width}
+        height={VIDEO.height}
       />
   );
 
